@@ -9,7 +9,7 @@
 using nlohmann::json;
 using std::string;
 using std::vector;
-
+using namespace pf;
 // Checks if the SocketIO event has JSON data.
 // If there is data the JSON object in string format will be returned,
 // else the empty string "" will be returned.
@@ -135,7 +135,6 @@ int main() {
           msgJson["best_particle_x"] = best_particle.x;
           msgJson["best_particle_y"] = best_particle.y;
           msgJson["best_particle_theta"] = best_particle.theta;
-
           // Optional message data used for debugging particle's sensing
           //   and associations
           msgJson["best_particle_associations"] = pf.getAssociations(best_particle);
