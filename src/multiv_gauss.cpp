@@ -15,10 +15,8 @@ double MultivGauss::multiv_prob(double x_obs, double y_obs)
              + y_obs / (2 * pow(sig_y_, 2));
 
   // calculate weight using normalization terms and exponent
-  double weight;
-  weight = gauss_norm * exp(-exponent);
 
-  return weight;
+  return gauss_norm * exp(-exponent);
 }
 
 }
